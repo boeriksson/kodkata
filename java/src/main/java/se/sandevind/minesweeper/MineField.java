@@ -1,35 +1,40 @@
 package se.sandevind.minesweeper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class MineField {
     private Random random = new Random();
-    private int[][] field;
+    private List<List<Integer>> field;
     public MineField(int size, int randomness) {
-        field = new int[size][size];
+        field = new ArrayList<>();
         for (int i = 0; i < size; i++) {
+            List<Integer> row = new ArrayList<>();
             for (int j = 0; j < size; j++) {
-                field[i][j] = (random.nextInt(randomness) == 0) ? -9: 0;
+                row.add((random.nextInt(randomness) == 0) ? -9: 0);
             }
+            field.add(row);
         }
     }
 
-    public int[][] getField() {
+    public List<List<Integer>> getField() {
         return field;
     }
 
     public void setFieldPos(int x, int y, int value) {
-        this.field[x][y] = value;
+        List row = field.get(y);
+        row.set(x, new Integer(value));
     }
 
     public void prettyPrint() {
         prettyPrint(this.field);
     }
-    public void  prettyPrint(int [][] field) {
-        for (int i = 0; i < field.length; i ++) {
+    public void  prettyPrint(List<List<Integer>> field) {
+        for (List<Integer> row : field) {
             System.out.print('\n');
-            for (int j = 0; j < field.length; j ++) {
-                System.out.print((field[i][j] == -9) ? "X" : "0");
+            for (Integer value : row) {
+                System.out.print(value);
             }
         }
     }
