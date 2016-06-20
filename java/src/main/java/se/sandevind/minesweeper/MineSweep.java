@@ -25,12 +25,15 @@ public class MineSweep {
                 }
             }
         }
-        System.out.println("NearMines: " + ((nearMines > 0) ? nearMines : -1));
-        field.get(y).set(x, (nearMines > 0) ? nearMines : -1);
-        mineField.setFieldPos(0,0,3);
-        mineField.prettyPrint(field);
-        return;
+        int element = (nearMines > 0) ? nearMines : -1;
+        System.out.println("NearMines: " + (element));
+        field.get(y).set(x, element);
+        if (element == -1) {
+
+        }
     }
+
+    private void checkSurroundings(int x, int y, List<List<Integer>> field, )
 
     public MineField getMineField() {
         return mineField;
