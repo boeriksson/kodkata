@@ -44,7 +44,15 @@ on a public branch, and git reset for undoing changes on a private branch
 **git log <since-commit-id>..<until-commit-id>** - Search for commits in a range between two commits
 **git log --no-merges** - the --no-merges flag filters away merge commits
 **git log --graph --oneline --decorate** - More graphical log
- 
+**git log --pretty=oneline** - logs commits with comments
+
+#####Diff
+**git diff commit1 commit2**
+**git diff HEAD~10 HEAD~5** - Diff between 10:th latest commit and 5:th latest
+**git diff --name-only commit1 commit2** 
+**git diff --name-status commmit1 commit2** - like name only, xcept you get a prefix telling what happend (modified, deleted, added)
+**git diff --name-status --oneline** - "oneLine": One Line
+
 
 
 
