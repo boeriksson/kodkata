@@ -1,6 +1,6 @@
 
 describe('es6 array tests', () => {
-  describe('Arrays', () => {
+  describe('#includes', () => {
     const strArray = ['annica', 'anna', 'ida', 'rose'];
     const objArray = [
       { id: 1, name: 'linda' },
@@ -18,6 +18,25 @@ describe('es6 array tests', () => {
 
       // The same object is matched on..
       expect(objArray.includes(objArray[1])).to.equal(true);
+    });
+  });
+
+  describe('#reduce', () => {
+    it('should return the sum of the array', () => {
+      expect([0, 1, 2, 3, 4].reduce(function(previousValue, currentValue) {
+        return previousValue + currentValue;
+      })).to.equal(10);
+    });
+
+    it('should return the sum of the array plus initial value', () => {
+      expect([0, 1, 2, 3, 4].reduce(function(previousValue, currentValue) {
+        return previousValue + currentValue;
+      }, 10)).to.equal(20);
+    });
+
+    it('should flatten an array of arrays', () => {
+      const flatten = [[0,1], [2,3], [4,5]].reduce((a, b) => a.concat(b));
+      expect(flatten).to.eql([0,1,2,3,4,5]);
     });
   });
 });

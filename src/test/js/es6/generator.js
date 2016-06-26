@@ -33,7 +33,7 @@ describe('es6 generator test', () => {
     expect(gen.next().value).to.equal(222);
   });
 
-  it('should ss', () => {
+  it('should return values according to delegated array', () => {
     function* firstGenerator() {
       yield* secondGenerator();
     }
