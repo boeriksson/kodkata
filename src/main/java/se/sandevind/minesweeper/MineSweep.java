@@ -33,7 +33,7 @@ public class MineSweep {
         }
     }
 
-    private void checkSurroundings(int x, int y, List<List<Integer>> field, )
+    //private void checkSurroundings(int x, int y, List<List<Integer>> field, )
 
     public MineField getMineField() {
         return mineField;

@@ -1,5 +1,5 @@
 
-describe('es6 general tests', () => {
+describe('es6 array tests', () => {
   describe('Arrays', () => {
     const strArray = ['annica', 'anna', 'ida', 'rose'];
     const objArray = [

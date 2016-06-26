@@ -1,4 +1,4 @@
-describe.only('equal vs eql', () => {
+describe('equal vs eql', () => {
   const obj1 = {
     id: '1',
     name: 'annica'

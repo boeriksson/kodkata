@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: se.sandevind.loops.AbsRangeTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.072 sec <<< FAILURE! - in se.sandevind.loops.AbsRangeTest
-absRange2(se.sandevind.loops.AbsRangeTest)  Time elapsed: 0.071 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[3210123]> but was:<[]>
-	at se.sandevind.loops.AbsRangeTest.absRange2(AbsRangeTest.java:20)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in se.sandevind.loops.AbsRangeTest
