@@ -18,6 +18,7 @@ https://repl.it/languages -> Lots of languages...
 
 ### Css
 https://css-tricks.com/pseudo-element-roundup/ -> Psuedo elements
+http://designwoop.com/2012/03/15-detailed-responsive-web-design-tutorials/ -> Responsive design
 
 ### Node 
 https://nodejs.org/api
