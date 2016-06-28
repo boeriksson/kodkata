@@ -9,6 +9,7 @@ https://www.reindex.io/blog/you-might-not-need-underscore/ -> Translate lodash/u
 #### Javascript unit test 
 https://gist.github.com/yoavniran/1e3b0162e1545055429e -> Cheet sheet for mocha chai och sinon
 http://ricostacruz.com/cheatsheets/sinon.html -> Cheet sheet for sinon
+https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js -> Sinon tutorial
 
 #### Javascript environments online
 https://jsfiddle.net/
