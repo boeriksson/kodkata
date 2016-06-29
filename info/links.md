@@ -38,3 +38,4 @@ http://regexr.com/ -> Build and test regular expressions
 
 ### Markdown
 http://www.cirosantilli.com/markdown-style-guide/ -> Markdown (.md) style guide
+http://daringfireball.net/projects/markdown/syntax#html -> Html inline in Markdown
