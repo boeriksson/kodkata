@@ -10,11 +10,13 @@ https://www.reindex.io/blog/you-might-not-need-underscore/ -> Translate lodash/u
 https://gist.github.com/yoavniran/1e3b0162e1545055429e -> Cheet sheet for mocha chai och sinon
 http://ricostacruz.com/cheatsheets/sinon.html -> Cheet sheet for sinon
 https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js -> Sinon tutorial
+https://github.com/avajs/ava/blob/master/docs/recipes/react.md  -> Ava tutorial
 
 #### Javascript environments online
 https://jsfiddle.net/
 http://jsbin.com/?html,css,js,output -> jsbin
 https://repl.it/languages -> Lots of languages... 
+http://http://codepen.io/ -> Shiny...
 
 ### Css
 https://css-tricks.com/pseudo-element-roundup/ -> Psuedo elements
