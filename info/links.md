@@ -21,6 +21,7 @@ http://http://codepen.io/ -> Shiny...
 ### Css
 https://css-tricks.com/pseudo-element-roundup/ -> Psuedo elements
 http://designwoop.com/2012/03/15-detailed-responsive-web-design-tutorials/ -> Responsive design
+https://github.com/google/code-prettify -> Prettify code snippets
 
 ### Node 
 https://nodejs.org/api
