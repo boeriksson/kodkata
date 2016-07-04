@@ -32,6 +32,10 @@ http://stackoverflow.com/questions/16139604/sideways-tab-with-css-rotated-tab-he
 https://icomoon.io/ -> SVG Icons.. Upload img and get a nice svg!
 https://www.iconfinder.com/ -> SVG Icons
 
+https://www.smashingmagazine.com/2011/07/learning-to-use-the-before-and-after-pseudo-elements-in-css/ -> Psuedo elements
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes -> Flex-box
+
 ### Node 
 https://nodejs.org/api
 http://node.green/ -> What is supported in various node versions
