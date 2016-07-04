@@ -55,3 +55,7 @@ http://daringfireball.net/projects/markdown/syntax#html -> Html inline in Markdo
 ### Git 
 https://github.com/blog/ -> The Git blog
 https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration -> Customising git configuration
+
+### Databases
+#### Firebase
+http://stackoverflow.com/questions/14963776/get-users-by-name-property-using-firebase -> Store and get by id
