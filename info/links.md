@@ -21,7 +21,10 @@ http://http://codepen.io/ -> Shiny...
 ### Css
 https://css-tricks.com/pseudo-element-roundup/ -> Psuedo elements
 http://designwoop.com/2012/03/15-detailed-responsive-web-design-tutorials/ -> Responsive design
-https://github.com/google/code-prettify -> Prettify code snippets
+https://gomakethings.com/using-the-prism-js-syntax-highlighter/ -> Prettify code snippets
+https://github.com/google/code-prettify -> Prettify code snippets (old)
+
+http://stackoverflow.com/questions/16139604/sideways-tab-with-css-rotated-tab-headers -> Sideway tabs
 
 ### Node 
 https://nodejs.org/api
