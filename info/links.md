@@ -21,6 +21,9 @@ http://http://codepen.io/ -> Shiny...
 #### Webpack
 http://www.jonathan-petitcolas.com/2015/05/15/howto-setup-webpack-on-es6-react-application-with-sass.html -> Webpack Setup
 
+### Html
+https://www.w3.org/TR/html5/ -> Html5 specification
+
 ### Css
 https://css-tricks.com/pseudo-element-roundup/ -> Psuedo elements
 http://designwoop.com/2012/03/15-detailed-responsive-web-design-tutorials/ -> Responsive design
