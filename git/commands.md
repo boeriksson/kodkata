@@ -1,25 +1,25 @@
 #Git commands
 
-#####Create new branch
+###Create new branch
 **git checkout -b your_branch**
 
 **git push -u origin your_branch**
 
-#####Remove local branch
+###Remove local branch
 **git branch -d your_branch**
 
-#####Remove a remote branch (**caution**)
+###Remove a remote branch (**caution**)
 **git push origin :your_branch**
 
-#####Resetting local branch to last committed stage
+###Resetting local branch to last committed stage
 **git reset --hard HEAD**
 
-#####Reseting local branch to origin
+###Reseting local branch to origin
 **git fetch origin**
 
 **git reset --hard origin/your_branch**
 
-#####Revert
+###Revert
 **Obs:** Reset do not alter existing commit history - git revert should be used to undo changes 
 on a public branch, and git reset for undoing changes on a private branch
 
@@ -36,7 +36,7 @@ on a public branch, and git reset for undoing changes on a private branch
 **--dru-run** - just show what would be done 
 
 
-#####Stash
+###Stash
 **git stash list**
 
 **git stash show stash@{XX}** - Where XX is the number of the stash shown in stash list
@@ -49,7 +49,7 @@ on a public branch, and git reset for undoing changes on a private branch
 
 **git stash drop** - removes the first stashed state from stash list (or the one specified)
 
-#####Log
+###Log
 **git log -3** - 3 last commits
 
 **git log --after="yesterday"** - Things committed today. Alt: "July 1st, 2014"
@@ -74,7 +74,7 @@ on a public branch, and git reset for undoing changes on a private branch
 
 **git log --pretty=oneline** - logs commits with comments
 
-#####Diff
+###Diff
 **git diff commit1 commit2**
 
 **git diff HEAD~10 HEAD~5** - Diff between 10:th latest commit and 5:th latest
@@ -86,7 +86,8 @@ on a public branch, and git reset for undoing changes on a private branch
 **git diff --name-status --oneline** - "oneLine": One Line
 
 
-
+###Tag
+**git tag -a <name> -m "<Comment>"** create a tag.. needs to be pushed specifically -> **git push origin <name>**
 
 
 
