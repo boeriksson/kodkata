@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.00001, minimum-scale=1.00001, maximum-scale=1.00001, user-scalable=no"/>
+    <meta http-equiv="cleartype" content="on">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link rel="dns-prefetch" href="//assets.adobedtm.com">
+    <link rel="prerender" href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Neucha&amp;subset=latin,greek,cyrillic,greek-ext,cyrillic-ext,latin-ext">
+    <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Neucha&amp;subset=latin,greek,cyrillic,greek-ext,cyrillic-ext,latin-ext">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://www-si1.unibet.co.uk/static/1.0.176.2826/css/unibet/images/touch-icons/touch-icon-76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www-si1.unibet.co.uk/static/1.0.176.2826/css/unibet/images/touch-icons/touch-icon-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www-si1.unibet.co.uk/static/1.0.176.2826/css/unibet/images/touch-icons/touch-icon-152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www-si1.unibet.co.uk/static/1.0.176.2826/css/unibet/images/touch-icons/touch-icon-180.png">
+
+    <meta name="msapplication-TileColor" content="#298027">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Neucha&amp;subset=latin,greek,cyrillic,greek-ext,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
+
+
+    <link rel="icon" href="data:;base64,="/>
+    <title>Cashier Client - Iframed</title>
+    <script>
+        !function(){"use strict";var e={},t={},n={conditional:[],dependency:[],widget:[],method:[],component:[]},o=[];window.cms={abstracted:{},global:{},util:{component:{}},factory:{},load:{},widget:{},flux:{store:{},action:{}},templates:{},setDependency:function(t,n){e[t]=n},setConditionalDependency:function(e,t){e()&&this.queueConditionalDependency(t)},getDependency:function(t){return e[t]?e[t].slice(0):[]},queueDependency:function(e){n.dependency.push(e)},queueConditionalDependency:function(e){n.conditional.push(e)},setWidget:function(e,n){t[e]||(t[e]={}),t[e][n.id]=n},getWidget:function(e,n){return n?t[e]?t[e][n]||null:null:$.map(t[e]||{},function(e){return e})},getTemplate:function(e,t){return cms.load.template(e,t)},requireWidget:function(e,t,n,o){var i,c=cms.getWidget(e,t);return c?void n.call(o||this,c):void(i=window.setInterval(function(){c=cms.getWidget(e,t),c&&(n.call(o||this,c),window.clearInterval(i))},100))},queueWidget:function(e,t,i,c){var d={type:e,id:t,settings:i||{},options:c||{}};cms.load.done?(d.callback=function(t){o.push({widget:t,type:e})},cms.load.widget(d)):n.widget.push(d)},clearWidgetsCache:function(){$.each(o,function(e,n){delete t[n.type][n.widget.id]}),o=[]},queueComponent:function(e,t,o){var i={type:e,id:t,props:o||{}};cms.load.done?cms.load.component(i):n.component.push(i)},queueMethod:function(e,t){cms.methodsLoaded?cms.load.method({method:e,parameters:t}):n.method.push({method:e,parameters:t})},getQueue:function(e){return n[e].slice()},ready:function(e,t){cms.widgetsLoaded?e.call(t||window):cms.queueMethod(function(){cms.util.event.subscribe("cmsWidgetsLoaded",function(){e.call(t||window)})})},remoteWidgetCall:function(e,t,n){var o=cms.getWidget(e,t);return o&&$.isFunction(o[n])?o[n].apply(o,arguments):!1}}}();
+    </script>
+    <script>
+        function onHeightChange(height) {
+            console.log("Setting height: "+height);
+            document.getElementById('iframe').height = height+"px";
+        }
+
+        function onIframeMessage(e) {
+            console.log("messageFromChild");
+            console.log(e);
+            if (!e.data) {
+                console.warn("No iframe message data.");
+                return;
+            }
+            let message = e.data;
+            if (typeof message === "string") {
+                message = JSON.parse(message);
+            }
+            switch(message.type) {
+                case "heightChange":
+                    onHeightChange(message.height);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        window.onmessage = onIframeMessage;
+    </script>
+</head>
+<body style="margin: 0;">
+<div id="container">
+    <header id="header">
+        <div id="drawer-bottom" class="drawer">
+            <div class="drawer-arrow"></div>
+            <div class="drawer-content">
+
+                <iframe id="iframe" src="./iframe-content.html" scrolling="no" frameborder="0" style="width: 100%; max-width: 800px;"></iframe>
+
+            </div>
+        </div>
+    </header>
+</div>
+</body>
+</html>

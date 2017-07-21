@@ -1,0 +1,38 @@
+{
+  "title" : "paycashierclient.deposit.paysafecard.title",
+  "min" : {
+    "amount" : "100.00",
+    "currency" : "SEK"
+  },
+  "max" : {
+    "amount" : "10000.00",
+    "currency" : "SEK"
+  },
+  "fee" : {
+    "percentageFee" : 3.0,
+    "label" : "PAYSAFECARD_DEPOSIT_FEE_UNIBET"
+  },
+  "description" : "paycashierclient.deposit.paysafecard.description",
+  "icons" : [ "uPaySafeCard" ],
+  "processingTime" : "paycashierclient.deposit.paysafecard.processingtime",
+  "serviceStatus" : {
+    "status" : "OK"
+  },
+  "key" : "paysafecard",
+  "bonusRestriction" : {
+    "status" : "DISABLED"
+  },
+  "_links" : {
+    "paymentmethods:method-home" : {
+      "href" : "/entercash-withdrawal/external-api/"
+    },
+    "self" : {
+      "href" : "https://payment-si1.unibet.com/paymentmethods/external-api/get-withdrawal-method/entercash-withdrawal"
+    },
+    "curies" : [ {
+      "href" : "http://payment.unibet.com/rels/{rel}",
+      "name" : "paymentmethods",
+      "templated" : true
+    } ]
+  }
+}

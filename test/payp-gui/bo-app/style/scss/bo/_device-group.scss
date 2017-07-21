@@ -1,0 +1,35 @@
+@mixin device-group-mobilephone {
+	@if ($device-group == mobilephone) {
+		@content;
+	}
+}
+
+@mixin device-group-tablet {
+	@if ($device-group == tablet) {
+		@content;
+	}
+}
+
+@mixin device-group-desktop {
+	@if ($device-group == desktop) {
+		@content;
+	}
+}
+
+@mixin device-group-not-mobilephone {
+	@if ($device-group != mobilephone) {
+		@content;
+	}
+}
+
+@mixin device-group-not-tablet {
+	@if ($device-group != tablet) {
+		@content;
+	}
+}
+
+@mixin device-group-not-desktop {
+	@if ($device-group != desktop) {
+		@content;
+	}
+}

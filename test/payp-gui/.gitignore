@@ -1,0 +1,18 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Dependency directories
+node_modules
+*.tgz
+
+# Optional npm cache directory
+.npm
+*.log
+
+# Webpack generated
+/dist/
+
+# Devserver
+build/dev-server/public/iframe-content.html

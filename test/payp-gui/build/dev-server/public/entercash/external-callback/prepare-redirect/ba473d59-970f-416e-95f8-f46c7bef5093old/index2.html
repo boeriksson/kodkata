@@ -1,0 +1,95 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Entercash</title>
+    <style>
+        @font-face {
+            font-family: 'RobotoRegular';
+            src: url("/dist/theme/unibet/fonts/roboto-bold-webfont.ttf") format('truetype')
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        html {
+            font-family: 'RobotoRegular', 'Droid Sans', 'Helvetica Neue', 'Segoe UI', 'Segoe', 'Open Sans', 'Helvetica', 'Arial';
+            font-weight: bold;
+        }
+        a {
+            color: #32CD32;
+        }
+    </style>
+</head>
+<body>
+<div id="container" style="text-align: center; width: 100%; height: 100%;">
+    <table id="messages">
+        <h2 id="message">...Redirecting...</h2>
+        <text id="subMessage"></text>&nbsp;<a id="link" href=""></a>
+        <p/>
+    </table>
+</div>
+<script type="text/javascript">
+    (function () {
+        if (window.opener) {
+            if(window.opener.redirectContent){
+                var content = window.opener.redirectContent();
+                var c = document.getElementById("container");
+                var e = document.getElementById("message");
+                var m = document.getElementById("subMessage");
+                var l = document.getElementById("link");
+
+                if (content.spinner) {
+                    var i = document.createElement("img");
+                    i.src = content.spinner;
+                    c.insertBefore(i, e);
+                }
+                if (content.message) {
+                    e.innerHTML = '';
+                    e.appendChild(document.createTextNode(content.message));
+                }
+                if (content.subMessage) {
+                    m.innerHTML = '';
+                    m.appendChild(document.createTextNode(content.subMessage));
+                    m.style.visibility='hidden';
+                }
+                if (content.linkMessage) {
+                    l.innerHTML = content.linkMessage;
+                    l.style.visibility='hidden'
+                }
+                if (content.style) {
+                    for(var key in content.style) {
+                        document.getElementsByTagName("body")[0].style[key] = content.style[key];
+                    }
+                }
+            }
+        }
+    }());
+
+    var redirectTrigger = function () {
+        var gotoURL;
+        var load = function(targetURL) {
+            if (targetURL) {
+                window.location = targetURL;
+            } else {
+                if (window.opener) {
+                    if(window.opener.gotoLocation) {
+                        var m = document.getElementById("subMessage");
+                        m.style.visibility='visible';
+
+                        var l = document.getElementById("link");
+                        l.style.visibility='visible';
+                        l.setAttribute('href',window.opener.gotoLocation);
+                        gotoURL = window.opener.gotoLocation;
+                        window.opener.gotoLocation = undefined;
+                    }
+                }
+                setTimeout(function(){
+                    load(gotoURL);
+                }, 200);
+            }
+        }
+        load();
+    }
+    redirectTrigger();
+
+</script>
+</body>
+</html>

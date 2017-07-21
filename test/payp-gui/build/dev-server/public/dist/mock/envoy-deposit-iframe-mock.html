@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function postSuccess() {
+            // envoy Deposit uses an iframe instead of a popup.
+            if (window.parent) {
+                var message = {
+                    type: 'RedirectResult'
+                };
+                window.parent.postMessage(JSON.stringify(message), location.protocol + '//' + location.host);
+            }
+        }
+
+        function postCancel() {
+            // envoy Deposit uses an iframe instead of a popup.
+            if (window.parent) {
+                var message = {
+                    type: 'Cancel'
+                };
+                window.parent.postMessage(JSON.stringify(message), location.protocol + '//' + location.host);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <button onclick="postSuccess()">Success</button>
+        <br/>
+        <br/>
+        <button onclick="postCancel()">Cancel</button>
+    </div>
+</body>
+</html>

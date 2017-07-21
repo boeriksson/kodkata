@@ -1,0 +1,166 @@
+/***********************************************************************************************************************
+* Reset
+* Reset and some basic styling
+***********************************************************************************************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: inherit;
+	vertical-align: baseline;
+	background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	cursor: pointer;
+}
+a:hover,
+a:active {
+	outline: none;
+}
+:focus {
+	outline: 0;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: inherit;
+	width: 100%;
+}
+input,
+select,
+label {
+	vertical-align: middle;
+}
+input[type="radio"] {
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+input[type="checkbox"] {
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	height: 13px;
+	width: 13px;
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+	outline: invert dotted thin;
+}
+button,
+input,
+select,
+textarea {
+	font-weight: normal;
+	margin: 0;
+}
+button {
+	width:auto;
+	overflow:visible;
+}
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+.clickable,
+input[type="button"],
+input[type="submit"],
+button {
+	cursor: pointer;
+	vertical-align: middle;
+}
+html {
+	overflow-y: auto;
+}
+html.no-scroll {
+	overflow-y: hidden;
+}
+html, body {
+	height: 100%;
+}
+body {
+	-webkit-text-size-adjust: 100%;
+}
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+label {
+	display: block;
+}
+ul, ol {
+	list-style: none;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+small {
+	font-size: 10px;
+}
+table {
+	empty-cells: show;
+}
+th, td {
+	text-align: left;
+}
+th {
+	font-weight: normal;
+	vertical-align: top;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+nav ul {
+	margin: 0;
+}

@@ -1,0 +1,16 @@
+@import "../../style/conf-theme-bo";
+
+.TransactionItem {
+  width: 100%;
+
+  &-Key {
+    width: 33%;
+	display:inline-block;
+    font-weight: bold;
+  }
+
+  &-Value{
+	width: 67%;
+	display:inline-block;
+  }
+}
