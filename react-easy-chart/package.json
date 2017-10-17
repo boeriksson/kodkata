@@ -1,0 +1,33 @@
+{
+  "name": "react-easy-chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "d3-array": "^1.2.1",
+    "d3-scale": "^1.0.6",
+    "d3-shape": "^1.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-easy-chart": "^0.3.0",
+    "react-faux-dom": "^4.0.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.2"
+  }
+}
