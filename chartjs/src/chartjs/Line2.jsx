@@ -13,16 +13,10 @@ class Stapel extends React.Component {
                 labels: ['2/8', '10/8', '18/8', '26/8', '1/9'],
                 datasets: [{
                     label: false,
-                    data: [100, 200, 250, 225, 180],
-                    backgroundColor: '#70e1a0',
-                    borderColor: '#0e5f31',
-                    fill: false
-                }, {
-                    label: false,
                     data: [0, 220, 80, 150, 260],
                     backgroundColor: '#299b59',
                     borderColor: '#0e5f31',
-                    fill: true
+                    fill: false
                 }]
             },
             options: {
@@ -43,16 +37,17 @@ class Stapel extends React.Component {
                     intersect: true
                 },
                 scales: {
-                    xAxis: [{
-                        display: true,
-                        labelString: 'Y-label',
-                        gridLines: {
-                            display: false
-                        }
-                    }],
                     yAxes: [{
                         display: true,
-                        labelString: 'X-label',
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            stepSize: 200
+                        }
+                    }],
+                    xAxes: [{
+                        display: true,
                         gridLines: {
                             display: false
                         }

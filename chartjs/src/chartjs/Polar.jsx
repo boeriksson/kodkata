@@ -1,19 +1,17 @@
 import React from 'react';
 import Chart from 'chart.js';
 
-class Stapel extends React.Component {
+class Polar extends React.Component {
     componentDidMount() {
         this.updateCanvas();
     }
     updateCanvas() {
         var ctx = this.refs.canvas.getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'polarArea',
             data: {
-                labels: ["Casino", "Poker", "Sportsbook", "Bingo", "Other"],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2],
+                    data: [20, 45, 35, 80, 15],
                     backgroundColor: [
                         '#0e5f31',
                         '#147b45',
@@ -21,23 +19,25 @@ class Stapel extends React.Component {
                         '#70e1a0',
                         '#e7fce9'
                     ],
-                    borderColor: [
-                        '#999999',
-                        '#999999',
-                        '#999999',
-                        '#999999',
-                        '#999999'
-                    ],
-                    borderWidth: 1
-                }]
+                    label: 'Product groups',
+                }],
+                //labels: ['Casino', 'Poker', 'Bingo', 'Sportsbook', 'other']
             },
             options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Polar Area Chart'
+                },
+                scale: {
+                    display: false
+                },
+                animation: {
+                    animateRotate: false,
+                    animateScale: true
                 }
             }
         });
@@ -51,4 +51,4 @@ class Stapel extends React.Component {
     }
 }
 
-export default Stapel;
+export default Polar;
