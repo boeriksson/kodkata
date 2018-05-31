@@ -17,6 +17,10 @@ module.exports = {
                     presets: ['es2017', 'react'],
                     plugins: ['transform-async-to-generator']
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
             }
         ]
     },

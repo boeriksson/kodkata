@@ -1,10 +1,10 @@
 import React from 'react';
-import ChartJS from './chartjs';
+import ReactDates from './react-dates';
 
 const BaseContainer = () =>  {
     return (
         <div>
-            <ChartJS/>
+            <ReactDates/>
         </div>
     )
 };
