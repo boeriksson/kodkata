@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/boeriksson/kodkata#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.2.4",
     "babel-plugin-console-log": "0.0.3",
@@ -33,7 +34,5 @@
     "sinon-chai": "^2.8.0",
     "webpack": "^1.13.1"
   },
-  "dependencies": {
-    "babel-cli": "^6.26.0"
-  }
+  "dependencies": {}
 }
