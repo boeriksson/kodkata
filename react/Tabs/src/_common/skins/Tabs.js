@@ -1,7 +1,7 @@
 import {css} from 'styled-components';
 
 export const Container = {
-    getDefaultStyle: (theme) => css`
+    getDefaultStyle: () => css`
         float: left;
         clear: both;
         width: 100%;

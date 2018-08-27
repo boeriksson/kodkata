@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import theme from './unibet'
 
-const tabStyles = (props) => props.theme.skins.Tabs.Container(props);
-const StyledTabs = styled.div`${tabStyles}`;
+const tabStyles = (props) => theme.skins.Tabs.Container(props);
+const StyledTabs = styled.div`${tabStyles}`
 
 const Tabs = ({ tabs, clickSelect }) => {
     const renderedTabs = tabs.map((tab, ix) =>
@@ -11,15 +12,15 @@ const Tabs = ({ tabs, clickSelect }) => {
             key={ix}
             className={ tab.selected ?  'selected' : ''}
             onClick={ () => clickSelect(tab) }
-        ><a>{tab.label}</a></li>);
+        ><a>{tab.label}</a></li>)
     return (
         <StyledTabs>
             <ul>
                 { renderedTabs }
             </ul>
         </StyledTabs>
-    );
-};
+    )
+}
 
 Tabs.propTypes = {
     tabs: PropTypes.arrayOf(PropTypes.shape({
@@ -28,6 +29,6 @@ Tabs.propTypes = {
         selected: PropTypes.bool
     })).isRequired,
     clickSelect: PropTypes.func.isRequired
-};
+}
 
-export default Tabs;
+export default Tabs

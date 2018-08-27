@@ -1,31 +1,39 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: ['babel-polyfill', path.join(__dirname, './src/index.js')],
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'main.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js[x]?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
                 options: {
-                    presets: ['es2017', 'react'],
-                    plugins: ['transform-async-to-generator']
-                }
+                    presets: [['env', {'modules': false}], 'react', 'stage-0']
+                },
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader"
+                    }
+                ]
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        showErrors: true,
-        template: 'src/template.html',
-        inject: 'body'
-    })],
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
+            filename: "./index.html"
+        })
+    ],
     resolve: {
         extensions: ['.js', '.jsx']
     }
-};
+}
