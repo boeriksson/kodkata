@@ -24,7 +24,8 @@ module.exports = {
                         loader: "html-loader"
                     }
                 ]
-            }
+            },
+            {test: /\.svg$/, loader: 'url-loader?mimetype=image/svg+xml'}
         ]
     },
     plugins: [

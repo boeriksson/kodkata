@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import Tabs from './Tabs'
 
@@ -6,12 +6,12 @@ const tabbar = [
     {
         key: 'SPORTS',
         label: 'Sports',
-        selected: true
+        selected: false
     },
     {
         key: 'HORSE_RACING',
         label: 'Horse Racing',
-        selected: false
+        selected: true
     },
     {
         key: 'BINGO',
@@ -20,11 +20,31 @@ const tabbar = [
     }
 ]
 
-const clickSelect = () => {}
+class ReactTestApp extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            tabs: tabbar
+        }
+    }
 
-const ReactTestApp = () => (
-    <Tabs tabs={tabbar} clickSelect={clickSelect}/>
-)
+    clickSelect = (cTab) => {
+        this.setState({
+            tabs: this.state.tabs.map((tab) => {
+                return {
+                    ...tab,
+                    selected: cTab.key === tab.key
+                }
+            })
+        })
+    }
+
+    render() {
+        return (
+            <Tabs tabs={this.state.tabs} clickSelect={this.clickSelect}/>
+        )
+    }
+}
 
 function start() {
     ReactDOM.render(
