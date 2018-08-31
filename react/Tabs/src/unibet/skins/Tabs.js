@@ -24,11 +24,9 @@ const setOrder = (tabs) => {
 export const Container = ({ expanded, tabs }) => {
     console.log('expanded: ', expanded)
     return css`${Tabs.Container.getDefaultStyle()}
-        float: left;
         clear: both;
         width: 100%;
         display: inline-block;
-        margin: 24px 0;
         
         > ul {
             background-color: #e8e8e8;
@@ -92,7 +90,7 @@ export const Container = ({ expanded, tabs }) => {
                     background-repeat: no-repeat;
                     transform: rotate(180deg);
                     position: absolute;
-                    top: 40px;
+                    top: 18px;
                     right: 30px;
                     width: 20px;
                     height: 30px;
@@ -111,7 +109,7 @@ export const Container = ({ expanded, tabs }) => {
                     background-image: url(${downArrow});
                     background-repeat: no-repeat;
                     position: absolute;
-                    top: 60px;
+                    top: 35px;
                     right: 30px;
                     width: 20px;
                     height: 30px;
