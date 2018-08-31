@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style="background-color: red;" onload="fupp()">
+    <div style="height: 500px;"></div>
+    <button onclick="fupp2()">load new iframe</button>
+</body>
+</html>
+<script>
+    var scrollPosition;
+    function fupp() {
+        console.log("onLoad")
+        scrollPosition = window.parent.scrollY;
+    }
+    function fupp2() {
+        console.log("button")
+        window.parent.scrollTo(0, scrollPosition)
+        document.body.innerHTML = '<iframe src="iframe2.html" height="200" width="100%"></iframe>'
+    }
+</script>
