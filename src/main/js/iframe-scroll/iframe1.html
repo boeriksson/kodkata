@@ -5,20 +5,28 @@
     <title>Title</title>
 
 </head>
-<body style="background-color: red;" onload="fupp()">
-    <div style="height: 500px;"></div>
+<body id="body" tabindex="9" style="background-color: red;" onload="fupp()">
+    <div id="datop" tabindex="0">TopButton</div>
+    <div id="bigframe" tabindex="1" style="height: 500px;"></div>
     <button onclick="fupp2()">load new iframe</button>
+    <button onclick="fupp3()">focus on top of iframe</button>
 </body>
 </html>
 <script>
     var scrollPosition;
     function fupp() {
-        console.log("onLoad")
         scrollPosition = window.parent.scrollY;
+        console.log("onLoad scrollPosition: ", scrollPosition)
+
     }
     function fupp2() {
         console.log("button")
+        console.log('iframe pos: ', parent.document.querySelector('iframe').scrollTop);
         window.parent.scrollTo(0, scrollPosition)
         document.body.innerHTML = '<iframe src="iframe2.html" height="200" width="100%"></iframe>'
+    }
+    function fupp3() {
+        console.log('button2');
+        document.getElementById("body").focus({ preventScroll:false });
     }
 </script>
