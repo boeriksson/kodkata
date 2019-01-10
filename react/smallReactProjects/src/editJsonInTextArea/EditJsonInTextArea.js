@@ -23,9 +23,30 @@ const defalutJson =
         }
     )
 
+const isValidJson = (str) => {
+    try {
+        JSON.parse(str)
+    } catch (e) {
+        return false
+    }
+    return true
+}
+
+const formatJson = (str) => {
+    let result
+    try {
+        result = JSON.stringify(JSON.parse(str), undefined, 2)
+    } catch (e) {
+        result = str
+    }
+    return result
+}
+
+/*
 const isValidJson = (str) => /^[\],:{}\s]*$/.test(str.toString().replace(/\\["\\\/bfnrtu]/g, '@').
 replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').
 replace(/(?:^|:|,)(?:\s*\[)+/g, ''))
+*/
 
 class EditJsonInTextArea extends Component {
     constructor(props) {
@@ -48,9 +69,7 @@ class EditJsonInTextArea extends Component {
     render() {
         console.log('jsonToEdit: ', this.state.jsonToEdit)
         const isValid = isValidJson(this.state.jsonToEdit)
-        const formattedJson = isValid
-            ? JSON.stringify(JSON.parse(this.state.jsonToEdit), undefined, 2)
-            : this.state.jsonToEdit
+        const formattedJson = formatJson(this.state.jsonToEdit)
         const malformedJSON = isValid ? 'none' : 'block'
         return (
             <div className="container">

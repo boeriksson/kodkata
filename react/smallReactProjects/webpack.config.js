@@ -17,6 +17,14 @@ module.exports = {
                     presets: [['env', { 'modules': false }], 'react', 'stage-0'],
                     plugins: ['transform-async-to-generator']
                 }
+            },
+            {
+                test: /\.(gif)$/i,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    mimetype: 'image/gif'
+                }
             }
         ]
     },

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import EditJsonInTextArea from './editJsonInTextArea/EditJsonInTextArea'
+import SpinnerPage from './spinner/SpinnerPage.jsx'
 
 const StartView = ({ loadComponent }) => (
     <div>
@@ -9,6 +9,9 @@ const StartView = ({ loadComponent }) => (
         <ul>
             <li>
                 <a href="#" onClick={ e => loadComponent(<EditJsonInTextArea/>) }>Edit Json in textarea</a>
+            </li>
+            <li>
+                <a href="#" onClick={ e => loadComponent(<SpinnerPage/>) }>Spinner page</a>
             </li>
         </ul>
     </div>
