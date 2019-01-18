@@ -1,12 +1,10 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: ['babel-polyfill', path.join(__dirname, './src/index.js')],
+    entry: ['babel-polyfill', path.join(__dirname, './src/mashup-component/module.js')],
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'main.js',
-        publicPath: path.join(__dirname, '.')
+        filename: 'mashupModule.js'
     },
     module: {
         rules: [
@@ -29,11 +27,6 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        showErrors: true,
-        template: 'src/template.html',
-        inject: 'body'
-    })],
     resolve: {
         extensions: ['.js', '.jsx']
     }

@@ -54,28 +54,30 @@ class EditJsonInTextArea extends Component {
         this.state = {
             jsonToEdit: defalutJson
         }
-        console.log("running constructor")
         this.updateJson = this.updateJson.bind(this)
         this.handleGo = this.handleGo.bind(this)
+        this.injectJson = this.injectJson.bind(this)
     }
     updateJson(e) {
         this.setState({ jsonToEdit: e.target.value })
-        console.log('updateJson: ', e.target.value);
     }
     handleGo() {
         console.log('Go: ', this.state.jsonToEdit)
     }
+    injectJson() {
+        this.setState({ jsonToEdit: '{ name: "completly diffrent json..." }'})
+    }
 
     render() {
-        console.log('jsonToEdit: ', this.state.jsonToEdit)
-        const isValid = isValidJson(this.state.jsonToEdit)
         const formattedJson = formatJson(this.state.jsonToEdit)
+        const isValid = isValidJson(this.state.jsonToEdit)
         const malformedJSON = isValid ? 'none' : 'block'
         return (
             <div className="container">
                 <h1>EditJsonInTextArea</h1>
+                <div><button onClick={this.injectJson}>Inject Json</button></div>
                 <div style={{ color: 'red', display: malformedJSON }}>Malformed JSON...</div>
-                <textarea style={{ margin: '15px 0' }} rows="20" cols="60" defaultValue={formattedJson} onChange={this.updateJson}/>
+                <textarea style={{ margin: '15px 0' }} rows="20" cols="60" value={formattedJson} onChange={this.updateJson}/>
                 <div>
                     <button disabled={!isValid} onClick={this.handleGo}>Go</button>
                 </div>
