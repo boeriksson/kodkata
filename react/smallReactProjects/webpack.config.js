@@ -5,8 +5,7 @@ module.exports = {
     entry: ['babel-polyfill', path.join(__dirname, './src/index.js')],
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'main.js',
-        publicPath: path.join(__dirname, '.')
+        filename: 'main.js'
     },
     module: {
         rules: [

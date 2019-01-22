@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 const StartView = () => (
     <div>
-        <h1>Mashup module</h1>
+        <h1>Mashup module - This script is served separately</h1>
 
     </div>
 )
@@ -12,6 +12,7 @@ const StartView = () => (
 class TheRootContext extends Component {
     constructor(props) {
         super(props)
+        console.log('mashupModule constructor running');
         this.state = { view: <StartView loadComponent={this.loadComponent}/> }
         this.loadComponent = this.loadComponent.bind(this)
     }
@@ -26,10 +27,13 @@ class TheRootContext extends Component {
 }
 
 function start() {
+    console.log('mashupModule.start runing');
     ReactDOM.render(
         <TheRootContext/>,
         document.getElementById('mashupModule')
     );
 }
 
-window.onload = start;
+console.log('in mashup module.. ')
+
+start()

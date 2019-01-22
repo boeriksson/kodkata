@@ -4,17 +4,22 @@ class Mashup extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            content: <div>Content beeing loaded here...</div>
+            content: '<div>Content beeing loaded here...</div>'
         }
     }
 
+
     componentDidMount() {
-        fetch('mashupModule.js')
-        .then((resp) => {
-            console.log('resp: ', resp);
+        fetch('/dist/mashupModule.js')
+        .then((response) => {
+            return response.text()
+        })
+        .then((result) => {
+            console.log('result: ', result)
+            window.eval(result)
         })
         .catch((e) => {
-            console.log('e: ', e);
+            console.log('e: ', e)
         })
     }
 
@@ -22,7 +27,7 @@ class Mashup extends Component {
         return (
             <div>
                 <h2>Mashup component</h2>
-                { this.state.content }
+                <div id="mashupModule">Here be da new module.. </div>
             </div>
         )
     }

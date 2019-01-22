@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: ['babel-polyfill', path.join(__dirname, './src/mashup-component/module.js')],
+    entry: [path.join(__dirname, './src/mashup-component/module.js')],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'mashupModule.js'

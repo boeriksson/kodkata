@@ -14,7 +14,6 @@ class MashupHost extends Component {
     }
 
     toggleMashup = () => {
-        console.log('toggle')
         this.setState({ toggle: !this.state.toggle, buttonLabel: getButtonLabel(this.state.toggle) })
     }
 
