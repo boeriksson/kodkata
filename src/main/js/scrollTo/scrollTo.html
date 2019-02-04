@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScrollTo</title>
+    <style type="text/css" media="screen">
+        body {
+            font: 17px "Arial", sans-serif;
+        }
+
+        div {
+            width: 100%;
+            height: 500px;
+            vertical-align: middle;
+        }
+
+        #one {
+            background-color: red
+        }
+        #two {
+            background-color: blue;
+        }
+        #three {
+            background-color: yellow;
+        }
+        #four {
+            background-color: green;
+        }
+        #five {
+            background-color: orange;
+        }
+
+        div#ctrl {
+            height: 30px;
+            position: fixed;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        Första sektionen
+    </div>
+
+    <div id="two">
+        Andra sektionen
+    </div>
+
+    <div id="three">
+        Tredja sektionen
+    </div>
+
+    <div id="four">
+        Fjärde sektionen
+    </div>
+
+    <div id="five">
+        Femte..
+    </div>
+
+    <div id="ctrl">
+        <button id="onebutton" value="one">one</button>
+        <button id="twobutton" value="two">two</button>
+        <button id="threebutton" value="three">three</button>
+        <button id="fourbutton" value="four">four</button>
+        <button id="fivebutton" value="five">five</button>
+    </div>
+</body>
+<script type="text/javascript">
+    console.log('js running...')
+
+    document.getElementById("onebutton").addEventListener ("click", scrollto, false)
+    document.getElementById("twobutton").addEventListener ("click", scrollto, false)
+    document.getElementById("threebutton").addEventListener ("click", scrollto, false)
+    document.getElementById("fourbutton").addEventListener ("click", scrollto, false)
+    document.getElementById("fivebutton").addEventListener ("click", scrollto, false)
+
+    function scrollto(e) {
+        console.log(e.target.id)
+        document.getElementById(e.target.value).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
+</html>
