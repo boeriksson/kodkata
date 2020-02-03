@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import SpinnerPage from './spinner/SpinnerPage.jsx'
 import EditJsonInTextArea from './editJsonInTextArea/EditJsonInTextArea'
+import MashupHost from './mashup-component/MashupHost'
 
 const StartView = ({ loadComponent }) => (
     <div>
@@ -9,6 +11,12 @@ const StartView = ({ loadComponent }) => (
         <ul>
             <li>
                 <a href="#" onClick={ e => loadComponent(<EditJsonInTextArea/>) }>Edit Json in textarea</a>
+            </li>
+            <li>
+                <a href="#" onClick={ e => loadComponent(<SpinnerPage/>) }>Spinner page</a>
+            </li>
+            <li>
+                <a href="#" onClick={ e => loadComponent(<MashupHost/>) }>Mashup page</a>
             </li>
         </ul>
     </div>

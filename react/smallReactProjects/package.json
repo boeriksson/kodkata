@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open",
+    "build-mashup": "webpack --config webpack.config.mashupmodule.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "html-webpack-plugin": "^2.30.1",
+    "url-loader": "^1.1.2",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.2"
   }
